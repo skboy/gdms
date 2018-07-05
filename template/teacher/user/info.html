@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>毕业设计管理系统</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    {include file="public/link" /}
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+<style>
+    .faq-search input {
+        width: 96%;
+        display: block;
+        padding: 2%;
+    }
+
+    .faq-search {
+        margin-bottom: 2em;
+        text-align: right;
+    }
+
+    .widget {
+        position: relative;
+        clear: both;
+        width: auto;
+        margin-bottom: 2em;
+    }
+
+
+</style>
+<body>
+
+{include file="public/header" /}
+<div id="content">
+
+    <div class="container">
+
+        <div class="row">
+
+            {include file="public/left" /}
+
+
+            <div class="span9">
+
+                <h1 class="page-title">
+                    <i class="icon-th-large"></i>
+                    学生信息
+                </h1>
+
+
+                <div class="row">
+
+                    <div class="span9">
+
+                        <div class="widget">
+
+                            <div class="widget-header">
+                                <h3>学生信息</h3>
+                            </div> <!-- /widget-header -->
+
+                            <div class="widget-content">
+
+
+                                <div class="tabbable">
+                                    <ul class="nav nav-tabs">
+                                        <li class="active">
+                                            <a href="#1" data-toggle="tab">基本信息</a>
+                                        </li>
+                                    </ul>
+
+                                    <br>
+
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="1">
+                                            <form id="edit-profile" class="form-horizontal">
+                                                <fieldset>
+
+                                                    <div class="control-group">
+                                                        <label class="control-label" for="username">学生姓名</label>
+                                                        <div class="controls">
+                                                            <input type="text" class="input-medium disabled"
+                                                                   id="username" value="{$student.name}" disabled="">
+                                                        </div> <!-- /controls -->
+                                                    </div> <!-- /control-group -->
+                                                    <div class="control-group">
+                                                        <label class="control-label" for="number">学生学号</label>
+                                                        <div class="controls">
+                                                            <input type="text" class="input-medium disabled"
+                                                                   id="number" value="{$student.number}" disabled="">
+                                                        </div> <!-- /controls -->
+                                                    </div> <!-- /control-group -->
+                                                    <div class="control-group">
+                                                        <label class="control-label" for="major">学生系别</label>
+                                                        <div class="controls">
+                                                            <input type="text" class="input-medium disabled"
+                                                                   id="major" value="{$student.major|get_major_name}" disabled="">
+                                                        </div> <!-- /controls -->
+                                                    </div> <!-- /control-group -->
+                                                    <div class="control-group">
+                                                        <label class="control-label" for="department">学生专业</label>
+                                                        <div class="controls">
+                                                            <input type="text" class="input-medium disabled"
+                                                                   id="department" value="{$student.department|get_department_name}" disabled="">
+                                                        </div> <!-- /controls -->
+                                                    </div> <!-- /control-group -->
+                                                    <div class="control-group">
+                                                        <label class="control-label" for="phone">联系电话</label>
+                                                        <div class="controls">
+                                                            <input type="text" class="input-medium disabled"
+                                                                   id="phone" value="{$student.phone}" disabled="">
+                                                        </div> <!-- /controls -->
+                                                    </div> <!-- /control-group -->
+                                                    <div class="control-group">
+                                                        <label class="control-label" for="qq">QQ</label>
+                                                        <div class="controls">
+                                                            <input type="text" class="input-medium disabled"
+                                                                   id="qq" value="{$student.qq}" disabled="">
+                                                        </div> <!-- /controls -->
+                                                    </div> <!-- /control-group -->
+                                                    <div class="control-group">
+                                                        <label class="control-label" for="wechat">微信</label>
+                                                        <div class="controls">
+                                                            <input type="text" class="input-medium disabled"
+                                                                   id="wechat" value="{$student.wechat}" disabled="">
+                                                        </div> <!-- /controls -->
+                                                    </div> <!-- /control-group -->
+                                                    <div class="control-group">
+                                                        <label class="control-label" for="email">微信</label>
+                                                        <div class="controls">
+                                                            <input type="text" class="input-medium disabled"
+                                                                   id="email" value="{$student.email}" disabled="">
+                                                        </div> <!-- /controls -->
+                                                    </div> <!-- /control-group -->
+
+
+
+                                                </fieldset>
+                                            </form>
+                                        </div>
+
+                                </div>
+
+                                </div>
+
+
+                            </div> <!-- /widget-content -->
+
+                        </div> <!-- /widget -->
+
+                    </div> <!-- /span9 -->
+
+                </div> <!-- /row -->
+
+
+            </div>
+
+
+        </div> <!-- /row -->
+
+    </div> <!-- /container -->
+
+</div> <!-- /content -->
+
+
+{include file="public/footer" /}
+
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+{include file="public/js" /}
+
+</body>
+</html>

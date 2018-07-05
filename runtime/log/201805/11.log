@@ -1,0 +1,38 @@
+---------------------------------------------------------------
+[ 2018-05-11T15:40:06+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ info ] 127.0.0.1:1235/ [运行时间：0.028621s][吞吐率：34.94req/s] [内存消耗：1,126.10kb] [文件加载：35]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\gdms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=162ae6e6f5f3b8-0697f14b30f5f-3a614f0b-1fa400-162ae6e6f613bd; CNZZDATA1264021086=1580631447-1523340068-%7C1523340068; admin_username=admin; PHPSESSID=qlogdnglv9244hgoqfll2m6lb0; holiday2018=%2301_01%2301_06%2301_07%2301_13%2301_14%2301_20%2301_21%2301_27%2301_28%2302_03%2302_04%2302_10%2302_15%2302_16%2302_17%2302_18%2302_19%2302_20%2302_21%2302_25%2303_03%2303_04%2303_10%2303_11%2303_17%2303_18%2303_24%2303_25%2303_31%2304_01%2304_05%2304_06%2304_07%2304_14%2304_15%2304_21%2304_22%2304_29%2304_30%2305_01%2305_05%2305_06%2305_12%2305_13%2305_19%2305_20%2305_26%2305_27%2306_02%2306_03%2306_09%2306_10%2306_16%2306_17%2306_18%2306_23%2306_24%2306_30%2307_01%2307_07%2307_08%2307_14%2307_15%2307_21%2307_22%2307_28%2307_29%2308_04%2308_05%2308_11%2308_12%2308_18%2308_19%2308_25%2308_26%2309_01%2309_02%2309_08%2309_09%2309_15%2309_16%2309_22%2309_23%2309_24%2310_01%2310_02%2310_03%2310_04%2310_05%2310_06%2310_07%2310_13%2310_14%2310_20%2310_21%2310_27%2310_28%2311_03%2311_04%2311_10%2311_11%2311_17%2311_18%2311_24%2311_25%2312_01%2312_02%2312_08%2312_09%2312_15%2312_16%2312_22%2312_23%2312_29%2312_30%23; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => '127.0.0.1:1235',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\student\controller\Login->index[ D:\phpStudy\PHPTutorial\WWW\gdms\application\student\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW\gdms\application/../template/student\login\index.html [ array (
+  0 => 'action',
+  1 => 'controller',
+) ]
+[ info ] [ LOG ] INIT File

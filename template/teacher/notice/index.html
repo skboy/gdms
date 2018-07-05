@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>毕业设计管理系统</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+    {include file="public/link" /}
+    {css href="/static/css/pages/plans.css" /}
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <style>
+        a{text-decoration: none;color:#333333}
+        a:hover, a:visited, a:link, a:active {
+            text-decoration: none;color:#333333
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+
+    {include file="public/header" /}<!-- /navbar-inner -->
+
+</div> <!-- /navbar -->
+
+
+<div id="content">
+
+    <div class="container">
+
+        <div class="row">
+
+            {include file="public/left" /}
+
+
+            <div class="span9">
+
+                <h1 class="page-title">
+                    <i class="icon-th-large"></i>
+                    公告管理
+                </h1>
+                <a href="{:url('/teacher/notice_add_edit')}" class="btn"style="margin-bottom: 10px">添加公告</a>
+
+                {volist name="notice_list" id="vo"}
+                <div class="row">
+
+                    <div class="span9">
+
+
+                        <div class="widget">
+                            <div class="widget-content">
+                               <a href="{:url('/teacher/notice_detail',array('notice_id'=>$vo.notice_id))}"style="clear: both">
+                                   <h3>
+                                       <span style="">{$vo.title} </span>
+                                       <span style="float: right;font-size: 12px;color: #333333">{$vo.update_time|date="Y-m-d H:i:s",###}</span>
+                                   </h3>
+                               </a>
+
+                                <a href="javascript:(0)" class="delete" notice_id="{$vo.notice_id}"style="float: right;margin-left: 10px">删除</a>
+                                <a href="{:url('/teacher/notice_add_edit',array('notice_id'=>$vo.notice_id))}"style="float: right;margin-left: 10px">修改</a>
+                                <a href="{:url('/teacher/notice_detail',array('notice_id'=>$vo.notice_id))}"style="float: right">查看</a>
+                            </div> <!-- /widget-content -->
+                        </div> <!-- /widget -->
+
+                    </div> <!-- /span9 -->
+
+                </div> <!-- /row -->
+
+                {/volist}
+                <div style="margin: 0 auto;float: right"> {$page}  </div>
+
+            </div> <!-- /span9 -->
+
+
+        </div> <!-- /row -->
+
+    </div> <!-- /container -->
+
+</div> <!-- /content -->
+
+{include file="public/footer" /}
+
+
+
+{js href="/static/js/jquery-1.7.2.min.js" /}
+{js href="/static/js/bootstrap.js" /}
+<script>
+$(function () {
+    $('.delete').click(function () {
+        var notice_id=$(this).attr('notice_id')
+        if(confirm("确定删除该公告?")){
+            window.location.href='/teacher/Notice/delete?notice_id='+notice_id;
+        }
+    })
+})
+</script>
+</body>
+</html>

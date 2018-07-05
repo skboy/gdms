@@ -1,0 +1,403 @@
+---------------------------------------------------------------
+[ 2018-04-11T17:57:56+08:00 ] 127.0.0.1 127.0.0.1 GET /admin
+[ info ] 127.0.0.1:1235/admin [运行时间：0.711077s][吞吐率：1.41req/s] [内存消耗：1,122.82kb] [文件加载：35]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\gdms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'admin_username=admin; UM_distinctid=162ae6e6f5f3b8-0697f14b30f5f-3a614f0b-1fa400-162ae6e6f613bd; CNZZDATA1264021086=1580631447-1523340068-%7C1523340068; PHPSESSID=dtu24lhga48bo7ooa8pihi5mrp; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => '127.0.0.1:1235',
+)
+[ info ] [ PARAM ] array (
+  '/admin' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ D:\phpStudy\PHPTutorial\WWW\gdms\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW\gdms\application/../template/admin\login\index.html [ array (
+  0 => 'action',
+  1 => 'controller',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-11T17:58:00+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/do_login
+[ info ] 127.0.0.1:1235/admin/do_login [运行时间：0.303880s][吞吐率：3.29req/s] [内存消耗：1,753.20kb] [文件加载：44]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\gdms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Login',
+    2 => 'do_login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'admin_username=admin; UM_distinctid=162ae6e6f5f3b8-0697f14b30f5f-3a614f0b-1fa400-162ae6e6f613bd; CNZZDATA1264021086=1580631447-1523340068-%7C1523340068; PHPSESSID=dtu24lhga48bo7ooa8pihi5mrp; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://127.0.0.1:1235/admin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'upgrade-insecure-requests' => '1',
+  'origin' => 'http://127.0.0.1:1235',
+  'cache-control' => 'max-age=0',
+  'content-length' => '28',
+  'connection' => 'close',
+  'host' => '127.0.0.1:1235',
+)
+[ info ] [ PARAM ] array (
+  '/admin/do_login' => '',
+  'account' => 'admin',
+  'password' => 'admin',
+)
+[ info ] [ RUN ] app\admin\controller\Login->do_login[ D:\phpStudy\PHPTutorial\WWW\gdms\application\admin\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004023s ] mysql:host=127.0.0.1;dbname=gdms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gdms_admin` [ RunTime:0.065863s ]
+[ sql ] [ SQL ] SELECT * FROM `gdms_admin` WHERE  `account` = 'admin' LIMIT 1 [ RunTime:0.000754s ]
+---------------------------------------------------------------
+[ 2018-04-11T17:58:00+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/index.html
+[ info ] 127.0.0.1:1235/admin/index/index.html [运行时间：0.111417s][吞吐率：8.98req/s] [内存消耗：1,173.46kb] [文件加载：37]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\gdms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; admin_username=admin; UM_distinctid=162ae6e6f5f3b8-0697f14b30f5f-3a614f0b-1fa400-162ae6e6f613bd; CNZZDATA1264021086=1580631447-1523340068-%7C1523340068; PHPSESSID=dtu24lhga48bo7ooa8pihi5mrp; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://127.0.0.1:1235/admin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => '127.0.0.1:1235',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\phpStudy\PHPTutorial\WWW\gdms\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW\gdms\application/../template/admin\index\index.html [ array (
+  0 => 'action',
+  1 => 'controller',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-11T17:58:03+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/major_list.html
+[ info ] 127.0.0.1:1235/admin/major_list.html [运行时间：0.169732s][吞吐率：5.89req/s] [内存消耗：1,761.66kb] [文件加载：44]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\gdms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Major',
+    2 => 'major_list',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'admin_username=admin; UM_distinctid=162ae6e6f5f3b8-0697f14b30f5f-3a614f0b-1fa400-162ae6e6f613bd; CNZZDATA1264021086=1580631447-1523340068-%7C1523340068; PHPSESSID=dtu24lhga48bo7ooa8pihi5mrp; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://127.0.0.1:1235/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => '127.0.0.1:1235',
+)
+[ info ] [ PARAM ] array (
+  '/admin/major_list_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Major->major_list[ D:\phpStudy\PHPTutorial\WWW\gdms\application\admin\controller\Major.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW\gdms\application/../template/admin\major\major_list.html [ array (
+  0 => 'action',
+  1 => 'controller',
+  2 => 'major',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000970s ] mysql:host=127.0.0.1;dbname=gdms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gdms_major_department` [ RunTime:0.053125s ]
+[ sql ] [ SQL ] SELECT * FROM `gdms_major_department` WHERE  `parent_id` = 0 [ RunTime:0.000553s ]
+---------------------------------------------------------------
+[ 2018-04-11T17:58:04+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/student_list.html
+[ info ] 127.0.0.1:1235/admin/student_list.html [运行时间：0.271730s][吞吐率：3.68req/s] [内存消耗：1,839.94kb] [文件加载：47]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\gdms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Student',
+    2 => 'student_list',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'admin_username=admin; UM_distinctid=162ae6e6f5f3b8-0697f14b30f5f-3a614f0b-1fa400-162ae6e6f613bd; CNZZDATA1264021086=1580631447-1523340068-%7C1523340068; PHPSESSID=dtu24lhga48bo7ooa8pihi5mrp; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://127.0.0.1:1235/admin/major_list.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => '127.0.0.1:1235',
+)
+[ info ] [ PARAM ] array (
+  '/admin/student_list_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Student->student_list[ D:\phpStudy\PHPTutorial\WWW\gdms\application\admin\controller\Student.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW\gdms\application/../template/admin\student\student_list.html [ array (
+  0 => 'action',
+  1 => 'controller',
+  2 => 'page',
+  3 => 'student',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010826s ] mysql:host=127.0.0.1;dbname=gdms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gdms_user` [ RunTime:0.054754s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gdms_user` WHERE  `type` = 0 LIMIT 1 [ RunTime:0.000522s ]
+[ sql ] [ SQL ] SELECT * FROM `gdms_user` WHERE  `type` = 0 LIMIT 0,15 [ RunTime:0.000582s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gdms_major_department` [ RunTime:0.038314s ]
+[ sql ] [ SQL ] SELECT `name` FROM `gdms_major_department` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000413s ]
+[ sql ] [ SQL ] SELECT `name` FROM `gdms_major_department` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000331s ]
+[ sql ] [ SQL ] SELECT `name` FROM `gdms_major_department` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000296s ]
+[ sql ] [ SQL ] SELECT `name` FROM `gdms_major_department` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000344s ]
+---------------------------------------------------------------
+[ 2018-04-11T17:58:09+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/student_import.html
+[ info ] 127.0.0.1:1235/admin/student_import.html [运行时间：0.206912s][吞吐率：4.83req/s] [内存消耗：1,310.77kb] [文件加载：39]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\gdms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Student',
+    2 => 'import',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'admin_username=admin; UM_distinctid=162ae6e6f5f3b8-0697f14b30f5f-3a614f0b-1fa400-162ae6e6f613bd; CNZZDATA1264021086=1580631447-1523340068-%7C1523340068; PHPSESSID=dtu24lhga48bo7ooa8pihi5mrp; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://127.0.0.1:1235/admin/student_list.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => '127.0.0.1:1235',
+)
+[ info ] [ PARAM ] array (
+  '/admin/student_import_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Student->import[ D:\phpStudy\PHPTutorial\WWW\gdms\application\admin\controller\Student.php ]
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW\gdms\application/../template/admin\student\import.html [ array (
+  0 => 'action',
+  1 => 'controller',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-11T17:58:11+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/student_list.html
+[ info ] 127.0.0.1:1235/admin/student_list.html [运行时间：0.131213s][吞吐率：7.62req/s] [内存消耗：1,839.94kb] [文件加载：47]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\gdms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Student',
+    2 => 'student_list',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'admin_username=admin; UM_distinctid=162ae6e6f5f3b8-0697f14b30f5f-3a614f0b-1fa400-162ae6e6f613bd; CNZZDATA1264021086=1580631447-1523340068-%7C1523340068; PHPSESSID=dtu24lhga48bo7ooa8pihi5mrp; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://127.0.0.1:1235/admin/major_list.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => '127.0.0.1:1235',
+)
+[ info ] [ PARAM ] array (
+  '/admin/student_list_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Student->student_list[ D:\phpStudy\PHPTutorial\WWW\gdms\application\admin\controller\Student.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW\gdms\application/../template/admin\student\student_list.html [ array (
+  0 => 'action',
+  1 => 'controller',
+  2 => 'page',
+  3 => 'student',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001141s ] mysql:host=127.0.0.1;dbname=gdms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gdms_user` [ RunTime:0.048151s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gdms_user` WHERE  `type` = 0 LIMIT 1 [ RunTime:0.000442s ]
+[ sql ] [ SQL ] SELECT * FROM `gdms_user` WHERE  `type` = 0 LIMIT 0,15 [ RunTime:0.000487s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gdms_major_department` [ RunTime:0.039411s ]
+[ sql ] [ SQL ] SELECT `name` FROM `gdms_major_department` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000416s ]
+[ sql ] [ SQL ] SELECT `name` FROM `gdms_major_department` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000453s ]
+[ sql ] [ SQL ] SELECT `name` FROM `gdms_major_department` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000441s ]
+[ sql ] [ SQL ] SELECT `name` FROM `gdms_major_department` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000413s ]
+---------------------------------------------------------------
+[ 2018-04-11T18:00:27+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/student_import.html
+[ info ] 127.0.0.1:1235/admin/student_import.html [运行时间：0.033290s][吞吐率：30.04req/s] [内存消耗：1,185.73kb] [文件加载：37]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\gdms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Student',
+    2 => 'import',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'admin_username=admin; UM_distinctid=162ae6e6f5f3b8-0697f14b30f5f-3a614f0b-1fa400-162ae6e6f613bd; CNZZDATA1264021086=1580631447-1523340068-%7C1523340068; PHPSESSID=dtu24lhga48bo7ooa8pihi5mrp; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://127.0.0.1:1235/admin/student_list.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => '127.0.0.1:1235',
+)
+[ info ] [ PARAM ] array (
+  '/admin/student_import_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Student->import[ D:\phpStudy\PHPTutorial\WWW\gdms\application\admin\controller\Student.php ]
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW\gdms\application/../template/admin\student\import.html [ array (
+  0 => 'action',
+  1 => 'controller',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-11T18:03:36+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/setting.html
+[ info ] 127.0.0.1:1235/admin/setting.html [运行时间：0.119812s][吞吐率：8.35req/s] [内存消耗：1,294.14kb] [文件加载：39]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\gdms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Admin',
+    2 => 'setting',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'admin_username=admin; UM_distinctid=162ae6e6f5f3b8-0697f14b30f5f-3a614f0b-1fa400-162ae6e6f613bd; CNZZDATA1264021086=1580631447-1523340068-%7C1523340068; PHPSESSID=dtu24lhga48bo7ooa8pihi5mrp; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://127.0.0.1:1235/admin/student_import.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => '127.0.0.1:1235',
+)
+[ info ] [ PARAM ] array (
+  '/admin/setting_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Admin->setting[ D:\phpStudy\PHPTutorial\WWW\gdms\application\admin\controller\Admin.php ]
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW\gdms\application/../template/admin\admin\setting.html [ array (
+  0 => 'action',
+  1 => 'controller',
+) ]
+[ info ] [ LOG ] INIT File

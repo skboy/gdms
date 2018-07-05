@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>毕业设计管理系统</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    {include file="public/link" /}
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+<style>
+    .faq-search input {
+        width: 96%;
+        display: block;
+        padding: 2%;
+    }
+
+    .faq-search {
+        margin-bottom: 2em;
+        text-align: right;
+    }
+
+    .widget {
+        position: relative;
+        clear: both;
+        width: auto;
+        margin-bottom: 2em;
+    }
+
+
+</style>
+<body>
+
+{include file="public/header" /}
+<div id="content">
+
+    <div class="container">
+
+        <div class="row">
+
+            {include file="public/left" /}
+
+
+            <div class="span9">
+
+                <h1 class="page-title">
+                    <i class="icon-th-large"></i>
+                  学生信息
+                </h1>
+
+
+                <div class="row">
+
+                    <div class="span9">
+
+                        <div class="widget">
+
+                            <div class="widget-header">
+                                <h3>学生列表</h3>
+                            </div> <!-- /widget-header -->
+
+                            <div class="widget-content">
+                                {foreach name="student_list" id="vo"}
+                                <a href="{:url('/teacher/student_info',['student_id'=>$vo.user_id])}">
+                                    <div class="account-avatar"style="padding-left: 40px;">
+                                        <div class="avatar-view" title="" style="width: 55px; height:55px;"data-original-title="上传头像">
+                                            <img src="{$vo.avatar}" alt="" class="thumbnail" />
+                                        </div>
+                                        <p style="margin-top: 10px;text-align: center">{$vo.name}</p>
+                                    </div> <!-- /account-avatar -->
+                                </a>
+
+                               {/foreach}
+                            </div> <!-- /account-avatar -->
+                            </div> <!-- /widget-content -->
+
+                        </div> <!-- /widget -->
+
+                    </div> <!-- /span9 -->
+
+                </div> <!-- /row -->
+
+
+            </div>
+
+
+        </div> <!-- /row -->
+
+    </div> <!-- /container -->
+
+</div> <!-- /content -->
+
+
+{include file="public/footer" /}
+
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+{include file="public/js" /}
+
+</body>
+</html>

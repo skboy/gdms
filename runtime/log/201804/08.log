@@ -1,0 +1,38 @@
+---------------------------------------------------------------
+[ 2018-04-08T11:04:40+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ info ] 127.0.0.1:1235/ [运行时间：0.374454s][吞吐率：2.67req/s] [内存消耗：1,118.17kb] [文件加载：35]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\gdms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=qgthems1k92luue51be2einjlq; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => '127.0.0.1:1235',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\student\controller\Login->index[ D:\phpStudy\PHPTutorial\WWW\gdms\application\student\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW\gdms\application/../template/student\login\index.html [ array (
+  0 => 'action',
+  1 => 'controller',
+) ]
+[ info ] [ LOG ] INIT File

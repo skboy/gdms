@@ -1,0 +1,128 @@
+{js href="/static/js/jquery-1.7.2.min.js" /}
+{css href="/static/cropper/cropper.min.css" /}
+{css href="/static/sitelogo/sitelogo.css" /}
+{css href="/static/cropper/cropper.min.js" /}
+{css href="/static/sitelogo/sitelogo.js" /}
+{js href="/static/js/bootstrap.js" /}
+<div class="span3">
+
+    <div class="account-container">
+
+        <div class="account-avatar" id="crop-avatar">
+            <div class="avatar-view" title="" style="width: 55px; height:55px;"data-original-title="上传头像">
+                <img src="{$user.avatar}" alt="" class="thumbnail" />
+            </div>
+        </div> <!-- /account-avatar -->
+
+        <div class="account-details">
+
+            <span class="account-name">{$user.name}</span>
+
+            <span class="account-role">{if condition="$user.type eq 0"}学生{else/}老师{/if}</span>
+
+            {if condition="($user.major neq null) and ($user.department neq null)"}
+            <span class="account-actions">
+						<a href="javascript:;">{$user.major|get_major_name}</a>	 |
+
+						<a href="javascript:;">{$user.department|get_department_name}</a>
+						</span>
+            {else/}{/if}
+
+        </div> <!-- /account-details -->
+
+    </div> <!-- /account-container -->
+
+    <hr />
+
+    <ul id="main-nav" class="nav nav-tabs nav-stacked">
+
+        <li class="{if condition='($controller eq "Index")'}active{/if}">
+            <a href="{:url('/student/index')}">
+                <i class="icon-home"></i>
+               首页
+            </a>
+        </li>
+
+        <li class="{if condition='($action eq "article_list") or ($action eq "detail")'}active{/if}">
+        <a href="{:url('/student/article_list')}">
+            <i class="icon-th-list"></i>
+            论文选题
+        </a>
+        </li>
+        <li class="{if condition='($action eq "student_article")'}active{/if}">
+            <a href="{:url('/student/student_article')}">
+                <i class="icon-pushpin"></i>
+               我的选题
+            </a>
+        </li>
+
+
+
+        <li class="{if condition='($action eq "message_list")'}active{/if}">
+            <a href="{:url('/student/message_list')}">
+                <i class="icon-th-large"></i>
+                留言
+               <!-- <span class="label label-warning pull-right">5</span>-->
+            </a>
+        </li>
+
+        <li class="{if condition='($controller eq "Rank")'}active{/if}">
+            <a href="{:url('/student/rank')}">
+                <i class="icon-signal"></i>
+                排行榜
+            </a>
+        </li>
+
+        <li class="{if condition='($controller eq "User")  and ($action eq "info")'}active{/if}">
+            <a href="{:url('/student/teacher_info')}">
+                <i class="icon-user"></i>
+                导师信息
+            </a>
+        </li>
+        <li class="{if condition='($controller eq "User")  and ($action eq "setting")'}active{/if}">
+        <a href="{:url('/student/setting')}">
+            <i class="icon-cog"></i>
+            设置
+        </a>
+        </li>
+
+    </ul>
+
+
+
+</div> <!-- /span3 -->
+
+<div class="modal fade" id="avatar-modal" aria-hidden="true" aria-labelledby="avatar-modal-label" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <form class="avatar-form" action="{:url('index/upload')}" enctype="multipart/form-data" method="post">
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal" type="button">&times;</button>
+                    <h4 class="modal-title" id="avatar-modal-label">上传头像</h4>
+                </div>
+                <div class="modal-body"style="max-height: 100%">
+                    <div class="avatar-body">
+                        <div class="avatar-upload">
+                            <input class="avatar-src" name="avatar_src" type="hidden">
+                            <input class="avatar-data" name="avatar_data" type="hidden">
+                            <label for="avatarInput">图片上传</label>
+                            <input class="avatar-input" id="avatarInput" name="avatar_file" type="file"></div>
+                        <div class="row">
+                            <div class="col-md-9">
+                                <div class="avatar-wrapper"></div>
+                            </div>
+                        </div>
+                        <div class="row avatar-btns">
+
+                            <div class="col-md-3">
+                                <button class="btn btn-success btn-block avatar-save" type="submit"><i class="fa fa-save"></i> 保存修改</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="loading" aria-label="Loading" role="img" tabindex="-1"></div>

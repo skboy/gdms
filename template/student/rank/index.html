@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>毕业设计管理系统</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    {include file="public/link" /}
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+<style>
+    .faq-search input {
+        width: 96%;
+        display: block;
+        padding: 2%;
+    }
+
+    .faq-search {
+        margin-bottom: 2em;
+        text-align: right;
+    }
+
+    .widget {
+        position: relative;
+        clear: both;
+        width: auto;
+        margin-bottom: 2em;
+    }
+</style>
+<body>
+
+{include file="public/header" /}
+<div id="content">
+
+    <div class="container">
+
+        <div class="row">
+
+            {include file="public/left" /}
+
+
+            <div class="span9">
+
+                <h1 class="page-title">
+                    <i class="icon-home"></i>
+                    首页
+                </h1>
+
+                <div class="stat-container">
+                    <h3>分数排行</h3>
+                    <div class="row">
+
+                        <div class="span3">
+
+                            <div class="widget">
+
+                                <div class="widget-content">
+                                    <h3>专业排行</h3>
+                                    {if condition="$department_rank eq null"}
+                                    暂无排行
+                                    {else/}
+                                    {foreach name="department_rank" id="vo"}
+                                    <div style="overflow: hidden;margin-bottom: 10px">
+                                        <div class="account-avatar" style="float: left;">
+                                            <img src="{$vo.user_id|get_avatar}" alt="" class="thumbnail">
+                                        </div> <!-- /account-avatar -->
+
+                                        <div class="account-details">
+
+
+                                    <span class="account-role">
+                                 {$vo.name}
+                                    </span>
+
+                                        </div>
+                                        <div style="float: right;margin-right: 10px">
+                                            {$vo.point}分
+                                        </div>
+                                    </div>
+
+                                    {/foreach}
+                                    {/if}
+
+                                </div> <!-- /widget-content -->
+
+                            </div> <!-- /widget -->
+
+                        </div> <!-- /span3 -->
+
+
+                        <div class="span3">
+
+                            <div class="widget">
+
+
+                                <div class="widget-content">
+                                    <h3>系排行</h3>
+                                    {if condition="$major_rank eq null"}
+                                    暂无排行
+                                    {else/}
+                                    {foreach name="major_rank" id="vo"}
+                                    <div style="overflow: hidden;margin-bottom: 10px">
+                                        <div class="account-avatar" style="float: left;">
+                                            <img src="{$vo.user_id|get_avatar}" alt="" class="thumbnail">
+                                        </div> <!-- /account-avatar -->
+
+                                        <div class="account-details">
+
+
+                                    <span class="account-role">
+                                 {$vo.name}
+                                    </span>
+
+                                        </div>
+                                        <div style="float: right;margin-right: 10px">
+                                            {$vo.point}分
+                                        </div>
+                                    </div>
+
+                                    {/foreach}
+                                    {/if}
+                                </div> <!-- /widget-content -->
+
+                            </div> <!-- /widget -->
+
+                        </div> <!-- /span3 -->
+
+
+                        <div class="span3">
+
+                            <div class="widget">
+
+                                <div class="widget-content">
+                                    <h3>全校排行</h3>
+                                    {if condition="$all_rank eq null"}
+                                    暂无排行
+                                    {else/}
+                                    {foreach name="all_rank" id="vo"}
+                                    <div style="overflow: hidden;margin-bottom: 10px">
+                                        <div class="account-avatar" style="float: left;">
+                                            <img src="{$vo.user_id|get_avatar}" alt="" class="thumbnail">
+                                        </div> <!-- /account-avatar -->
+
+                                        <div class="account-details">
+
+
+                                    <span class="account-role">
+                                 {$vo.name}
+                                    </span>
+
+                                        </div>
+                                        <div style="float: right;margin-right: 10px">
+                                            {$vo.point}分
+                                        </div>
+                                    </div>
+
+                                    {/foreach}
+                                    {/if}
+                                </div> <!-- /widget-content -->
+
+                            </div> <!-- /widget -->
+
+                        </div> <!-- /span3 -->
+
+                    </div>
+
+
+                </div>
+
+            </div> <!-- /stat-container -->
+
+        </div> <!-- /span9 -->
+
+
+    </div> <!-- /row -->
+
+</div> <!-- /container -->
+
+</div> <!-- /content -->
+
+
+{include file="public/footer" /}
+
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+{include file="public/js" /}
+</body>
+</html>

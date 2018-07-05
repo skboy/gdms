@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>毕业设计管理系统后台</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    {include file="public/link" /}
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+<style>
+    .faq-search input {
+        width: 96%;
+        display: block;
+        padding: 2%;
+    }
+
+    .faq-search {
+        margin-bottom: 2em;
+        text-align: right;
+    }
+
+    .widget {
+        position: relative;
+        clear: both;
+        width: auto;
+        margin-bottom: 2em;
+    }
+</style>
+<body>
+
+{include file="public/header" /}
+<div id="content">
+
+    <div class="container">
+
+        <div class="row">
+
+            {include file="public/left" /}
+
+
+            <div class="span9">
+
+                <h1 class="page-title">
+                    <i class="icon-home"></i>
+                    首页
+                </h1>
+
+                <div class="stat-container">
+                    <h3>专业管理</h3>
+                    <div class="widget widget-table">
+
+                        <div class="widget-header">
+                            <i class="icon-th-list"></i>
+                            <h3>列表</h3>
+                        </div> <!-- /widget-header -->
+
+                        <div class="widget-content">
+
+                            <form id="edit-profile" method="post" class="form-horizontal" style="margin-top: 20px">
+
+                                <fieldset>
+                                    <div class="control-group">
+                                        <label class="control-label" for="name">系别</label>
+                                        <div class="controls">
+                                            <select name="parent_id" id=""style="width: 160px">
+                                                {foreach name="major" id="vo"}
+                                                <option value="{$vo.id}"{if condition="$vo['id'] eq $department['parent_id']"}selected{/if}>{$vo.name}</option>
+                                                {/foreach}
+                                            </select>
+                                        </div> <!-- /controls -->
+                                    </div> <!-- /control-group -->
+                                    <div class="control-group">
+                                        <label class="control-label" for="name">专业名字</label>
+                                        <div class="controls">
+                                            <input type="text" class="input-medium disabled"name="name" id="name"
+                                                   value="{if condition='isset($department)'}{$department.name}{/if}">
+                                        </div> <!-- /controls -->
+                                    </div> <!-- /control-group -->
+                                    <input type="hidden" class="input-medium disabled"name="id" id="id" value="{if condition='isset($department)'}{$department.id}{/if}">
+
+
+
+
+
+
+                                    <div class="form-actions" style="background-color: white;border-top: none">
+                                        <button type="submit" class="btn btn-primary">提交</button>
+                                    </div> <!-- /form-actions -->
+                                </fieldset>
+                            </form>
+                        </div>
+
+                    </div> <!-- /stat-container -->
+
+                </div> <!-- /span9 -->
+
+
+            </div> <!-- /row -->
+
+        </div> <!-- /container -->
+
+    </div> <!-- /content -->
+
+
+    {include file="public/footer" /}
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    {include file="public/js" /}
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>毕业设计管理系统后台</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    {include file="public/link" /}
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+<style>
+    .faq-search input {
+        width: 96%;
+        display: block;
+        padding: 2%;
+    }
+
+    .faq-search {
+        margin-bottom: 2em;
+        text-align: right;
+    }
+
+    .widget {
+        position: relative;
+        clear: both;
+        width: auto;
+        margin-bottom: 2em;
+    }
+</style>
+<body>
+
+{include file="public/header" /}
+<div id="content">
+
+    <div class="container">
+
+        <div class="row">
+
+            {include file="public/left" /}
+
+
+            <div class="span9">
+
+                <h1 class="page-title">
+                    <i class="icon-home"></i>
+                   设置
+                </h1>
+
+                <div class="stat-container">
+                    <h3>初始化设置</h3>
+                    <a href="{:url('admin/admin/initialization')}" class="btn btn-small">
+                        初始化
+                    </a>
+                    <p>初始化后,学生老师论文等数据全部清空</p>
+                </div>
+
+            </div> <!-- /stat-container -->
+
+        </div> <!-- /span9 -->
+
+
+    </div> <!-- /row -->
+
+</div> <!-- /container -->
+
+</div> <!-- /content -->
+
+
+{include file="public/footer" /}
+
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+{include file="public/js" /}
+</body>
+</html>

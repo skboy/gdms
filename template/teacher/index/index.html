@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>毕业设计管理系统</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	{include file="public/link" /}
+
+	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+<style>
+	.faq-search input {
+		width: 96%;
+		display: block;
+		padding: 2%;
+	}
+
+	.faq-search {
+		margin-bottom: 2em;
+		text-align: right;
+	}
+
+	.widget {
+		position: relative;
+		clear: both;
+		width: auto;
+		margin-bottom: 2em;
+	}
+
+
+</style>
+<body>
+
+{include file="public/header" /}
+<div id="content">
+
+	<div class="container">
+
+		<div class="row">
+
+			{include file="public/left" /}
+
+
+			<div class="span9">
+
+				<h1 class="page-title">
+					<i class="icon-th-list"></i>
+					首页
+				</h1>
+				<div class="widget-header" style="margin-bottom: 20px">
+					<h3>最新留言</h3>
+				</div> <!-- /widget-header -->
+				<div class="stat-container">
+
+					{volist name="message_list" id="vo"}
+
+					<div class="widget">
+						<a href="{:url('/teacher/message_list',array('student_id'=>$vo.student_id))}">
+						<div class="widget-content">
+
+							<div class="account-container" style="display: block;overflow: hidden;">
+
+								<div class="account-avatar" style="float: left;">
+									<img src="{$vo.student_id|get_avatar}" alt="" class="thumbnail">
+								</div> <!-- /account-avatar -->
+
+								<div class="account-details">
+
+
+                                    <span class="account-role">
+                                      {$vo.student_name}
+                                    </span>
+
+								</div> <!-- /account-details -->
+								<div class="account-details" style="float: left;">
+									<p style="margin: 0"> {$vo.content}</p>
+									<p class="account-role" style="margin: 0">{$vo.create_time|date="Y-m-d
+										H:i:s",###}</p>
+								</div>
+
+							</div>
+						</div>
+						</a>
+					</div>
+					{/volist}
+
+
+
+				</div> <!-- /stat-container -->
+			</div> <!-- /span9 -->
+
+
+		</div> <!-- /row -->
+
+	</div> <!-- /container -->
+
+</div> <!-- /content -->
+
+
+{include file="public/footer" /}
+
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+{include file="public/js" /}
+</body>
+</html>

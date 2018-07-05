@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>毕业设计管理系统</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+
+	  {include file="public/link" /}
+
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+
+<body>
+{include file="public/header" /}
+
+
+
+<div id="login-container">
+	
+	
+	<div id="login-header">
+		
+		<h3>学生登录</h3>
+		
+	</div> <!-- /login-header -->
+	
+	<div id="login-content" class="clearfix">
+	
+	<form action="/student/do_login" method="post"/>
+				<fieldset>
+					<div class="control-group">
+						<label class="control-label" for="student_number">学号</label>
+						<div class="controls">
+							<input type="text" class=""name="number" id="student_number" />
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label" for="password">密码</label>
+						<div class="controls">
+							<input type="password" name="password"class="" id="password" />
+						</div>
+					</div>
+				</fieldset>
+				
+				<!--<div id="remember-me" class="pull-left">
+					<input type="checkbox" name="remember" id="remember" />
+					<label id="remember-label" for="remember">Remember Me</label>
+				</div>-->
+				
+				<div class="pull-right">
+
+					<button type="submit" class="btn btn-warning btn-large">
+						登录
+					</button>
+				</div>
+		<div class="pull-left">
+			<a href="/teacher/login"style="float:left;" target="_blank">我是老师</a>
+		</div>
+			</form>
+			
+		</div> <!-- /login-content -->
+		
+		
+		<div id="login-extra">
+			
+			<p>忘记密码? <a href="javascript:;">请拿学生证到网络中心.</a></p>
+
+		</div> <!-- /login-extra -->
+	
+</div> <!-- /login-wrapper -->
+
+    
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+
+
+
+  </body>
+</html>

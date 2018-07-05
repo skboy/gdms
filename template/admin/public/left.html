@@ -1,0 +1,91 @@
+
+<div class="span3">
+
+    <div class="account-container">
+
+        <div class="account-avatar" id="crop-avatar">
+            <div class="avatar-view" title="" style="width: 55px; height:55px;"data-original-title="">
+                <img src="" alt="" class="thumbnail" />
+            </div>
+        </div> <!-- /account-avatar -->
+
+        <div class="account-details">
+
+            <span class="account-name">admin</span>
+
+            <span class="account-role">管理员</span>
+
+            <span class="account-actions">
+
+						</span>
+
+        </div> <!-- /account-details -->
+
+    </div> <!-- /account-container -->
+
+    <hr />
+
+    <ul id="main-nav" class="nav nav-tabs nav-stacked">
+
+        <li class="{if condition='($controller eq "Index")'}active{/if}">
+            <a href="{:url('/admin/index')}">
+                <i class="icon-home"></i>
+               首页
+            </a>
+        </li>
+
+        <li class="{if condition='($controller eq "Major")'}active{/if}">
+        <a href="{:url('/admin/major_list')}">
+            <i class="icon-th-list"></i>
+           系别管理
+        </a>
+        </li>
+        <li class="{if condition='($controller eq "Department")'}active{/if}">
+        <a href="{:url('/admin/department_list')}">
+            <i class="icon-th-list"></i>
+            专业管理
+        </a>
+        </li>
+
+        <li class="{if condition='($controller eq "Category")'}active{/if}">
+        <a href="{:url('/admin/category_list')}">
+            <i class="icon-th-large"></i>
+            分类管理
+            <!-- <span class="label label-warning pull-right">5</span>-->
+        </a>
+        </li>
+
+     <!--   <li class="{if condition='($controller eq "Schedule")'}active{/if}">
+        <a href="{:url('/admin/schedule_list')}">
+            <i class="icon-pushpin"></i>
+            进度管理
+        </a>
+        </li>-->
+
+        <li class="{if condition='($controller eq "Student")'}active{/if}">
+            <a href="{:url('/admin/student_list')}">
+                <i class="icon-user"></i>
+                学生管理
+            </a>
+        </li>
+        <li class="{if condition='($controller eq "Teacher")'}active{/if}">
+        <a href="{:url('/admin/teacher_list')}">
+            <i class="icon-user"></i>
+            教师管理
+        </a>
+        </li>
+        <li class="{if condition='($controller eq "Admin") '}active{/if}">
+        <a href="{:url('/admin/setting')}">
+            <i class="icon-cog"></i>
+            设置
+        </a>
+        </li>
+
+    </ul>
+
+
+
+
+    <br />
+
+</div> <!-- /span3 -->

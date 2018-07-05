@@ -1,0 +1,37 @@
+---------------------------------------------------------------
+[ 2018-03-26T22:02:12+08:00 ] 127.0.0.1 127.0.0.1 GET /gdms/public/
+[ info ] 127.0.0.1/gdms/public/ [运行时间：0.411330s][吞吐率：2.43req/s] [内存消耗：1,233.50kb] [文件加载：37]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\gdms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\student\controller\Login->index[ D:\phpStudy\PHPTutorial\WWW\gdms\application\student\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW\gdms\application/../template/student\login\index.html [ array (
+  0 => 'action',
+  1 => 'controller',
+) ]
+[ info ] [ LOG ] INIT File
