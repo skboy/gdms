@@ -28,6 +28,9 @@ Route::group('teacher',function(){
     Route::get('student_list','teacher/User/student_list');
     Route::get('student_info','teacher/User/info');
     Route::any('schedule','teacher/Schedule/schedule_list');
+    Route::any('task_list','teacher/Schedule/task_list');
+    Route::any('task_add_edit','teacher/Schedule/add_edit');
+
 });
 
 Route::group('student',function(){
