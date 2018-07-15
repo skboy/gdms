@@ -1,7 +1,7 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : root
+Source Server         : local
 Source Server Version : 50553
 Source Host           : 127.0.0.1:3306
 Source Database       : gdms
@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2018-06-08 16:06:38
+Date: 2018-07-15 19:26:21
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -256,6 +256,33 @@ INSERT INTO `gdms_schedule` VALUES ('5', '10', '完成', null, '0', null, null);
 INSERT INTO `gdms_schedule` VALUES ('6', '10', 'sd', null, '0', null, null);
 
 -- ----------------------------
+-- Table structure for gdms_task
+-- ----------------------------
+DROP TABLE IF EXISTS `gdms_task`;
+CREATE TABLE `gdms_task` (
+  `task_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `article_id` int(11) NOT NULL,
+  `task_name` varchar(255) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `point` varchar(255) DEFAULT NULL,
+  `r_point` varchar(255) DEFAULT NULL,
+  `file_path` varchar(255) DEFAULT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '0未开始1执行中2完成3审核中',
+  `start_time` int(11) DEFAULT NULL,
+  `end_time` int(11) DEFAULT NULL,
+  `r_start_time` int(11) DEFAULT NULL,
+  `r_end_time` int(11) DEFAULT NULL,
+  `create_time` int(11) DEFAULT NULL,
+  `update_time` int(11) DEFAULT NULL,
+  PRIMARY KEY (`task_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of gdms_task
+-- ----------------------------
+INSERT INTO `gdms_task` VALUES ('1', '23', '测试任务1', '测试描述1', '10', '8', null, '0', null, null, null, null, null, null);
+
+-- ----------------------------
 -- Table structure for gdms_user
 -- ----------------------------
 DROP TABLE IF EXISTS `gdms_user`;
@@ -281,6 +308,6 @@ CREATE TABLE `gdms_user` (
 -- ----------------------------
 -- Records of gdms_user
 -- ----------------------------
-INSERT INTO `gdms_user` VALUES ('1', 'c28634d89bdab94593fe470ea5fb5106', '1444444444', '小明', '1', '2', '15602402446', '364971779', 'z364971779', 'R631', '364971779@qq.com', '', '0', '\\uploads\\20180218\\192e055c06b0bd4fea18775fa5a43047.jpeg');
-INSERT INTO `gdms_user` VALUES ('2', 'c28634d89bdab94593fe470ea5fb5106', '1555555555', '王键', '1', '2', '15602402446', '36497177912', 'z364971779123', 'R631', '364971779@qq.com', '', '1', '\\uploads\\20180218\\42ea07e5d3005ff5eac3da110c9dd1b5.png');
+INSERT INTO `gdms_user` VALUES ('1', 'e4131e64fce0c52492784d07ff62dce9', '1444444444', '小明', '1', '2', '15602402446', '364971779', 'z364971779', 'R631', '364971779@qq.com', '', '0', '\\uploads\\20180218\\192e055c06b0bd4fea18775fa5a43047.jpeg');
+INSERT INTO `gdms_user` VALUES ('2', 'e4131e64fce0c52492784d07ff62dce9', '1555555555', '王键', '1', '2', '15602402446', '36497177912', 'z364971779123', 'R631', '364971779@qq.com', '', '1', '\\uploads\\20180218\\42ea07e5d3005ff5eac3da110c9dd1b5.png');
 INSERT INTO `gdms_user` VALUES ('3', 'c28634d89bdab94593fe470ea5fb5106', '1340224115', '李志豪', '1', '2', '15602402446', '364971779', 'z364971779', 'R631', '364971779@qq.com', '', '0', '\\uploads\\20180217\\ca5755238b4dd024cb4ed67dc59fdcf8.png');
