@@ -29,7 +29,10 @@ Route::group('teacher',function(){
     Route::get('student_info','teacher/User/info');
     Route::any('schedule','teacher/Schedule/schedule_list');
     Route::any('task_list','teacher/Schedule/task_list');
-    Route::any('task_add_edit','teacher/Schedule/add_edit');
+    Route::any('task_add_edit','teacher/Schedule/task_add_edit');
+    Route::any('task_add_all','teacher/Schedule/task_add_all');
+    Route::any('task_delete','teacher/Schedule/task_delete');
+    Route::any('task_detail','teacher/Schedule/task_detail');
 
 });
 

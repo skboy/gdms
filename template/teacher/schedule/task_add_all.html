@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>毕业设计管理系统</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    {include file="public/link" /}
+    {css href="/static/css/pages/plans.css" /}
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+        select {
+            width: auto;
+            padding-left: 27%;
+            margin: 0;
+        }
+
+        option {
+
+            text-align: center;
+
+        }
+
+
+    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+
+<body>
+
+{include file="public/header" /}
+
+
+<div id="content">
+
+    <div class="container">
+
+        <div class="row">
+
+            {include file="public/left" /}
+
+
+            <div class="span9">
+
+                <h1 class="page-title">
+                    <i class="icon-th-large"></i>
+                    添加论文
+                </h1>
+                <div class="row">
+
+                    <div class="span9">
+
+                        <div class="widget">
+
+                            <div class="widget-header">
+                                <h3>论文信息</h3>
+                            </div> <!-- /widget-header -->
+
+                            <div class="widget-content">
+
+                                <div class="tabbable">
+                                    <br/>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="1">
+                                            <form id="edit-profile" class="form-horizontal"
+                                                  enctype="multipart/form-data" method="post"/>
+                                            <fieldset>
+                                                <input type="hidden" name="task_id"
+                                                       value="{if condition='isset($task)'}{$task.task_id}{/if}">
+                                                <div class="control-group">
+                                                    <label class="control-label">任务标题</label>
+                                                    <div class="controls">
+                                                        <input type="text" class="" name="task_name" id="task_name"
+                                                               style="width: 450px"/>
+                                                    </div> <!-- /controls -->
+                                                </div> <!-- /control-group -->
+
+                                                <div class="control-group">
+                                                    <label class="control-label">任务分数</label>
+                                                    <div class="controls">
+                                                        <input type="text" class="" name="point"
+                                                               style="width: 450px"/>
+                                                    </div> <!-- /controls -->
+                                                </div> <!-- /control-group -->
+                                                <div class="control-group">
+                                                    <label class="control-label">开始时间</label>
+                                                    <div class="controls">
+                                                        <input type="input" id="start_time" class="" name="start_time"
+                                                               style="width: 450px"/>
+                                                    </div> <!-- /controls -->
+                                                </div> <!-- /control-group -->
+                                                <div class="control-group">
+                                                    <label class="control-label">结束时间</label>
+                                                    <div class="controls">
+                                                        <input type="text" id="end_time" class="" name="end_time"
+                                                               style="width: 450px"/>
+                                                    </div> <!-- /controls -->
+                                                </div> <!-- /control-group -->
+                                                <div class="control-group">
+                                                    <label class="control-label">附件</label>
+                                                    <div class="controls">
+                                                        <input type="file" name="teacher_file">
+                                                    </div>
+                                                </div>
+                                                <div class="control-group">
+                                                    <label class="control-label" for="description">任务描述</label>
+                                                    <div class="controls">
+												<textarea type="text" class="" id="description" name="description"
+                                                          style="width: 450px;height:100px;">
+												</textarea>
+                                                    </div> <!-- /controls -->
+                                                </div> <!-- /control-group -->
+                                                <br/>
+                                                {js href="/static/js/ueditor.config.js" /}
+                                                <!-- 编辑器源码文件 -->
+                                                {js href="/static/js/ueditor.all.min.js" /}
+                                                <!-- 实例化编辑器 -->
+
+                                                <div class="form-actions">
+                                                    <button type="submit" class="btn btn-primary">提交</button>
+                                                    <a  href="{:url('/teacher/schedule')}" class="btn btn-primary">返回</a>
+
+                                                </div> <!-- /form-actions -->
+                                            </fieldset>
+                                            </form>
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+                            </div> <!-- /widget-content -->
+
+                        </div> <!-- /widget -->
+
+                    </div> <!-- /span9 -->
+
+                </div> <!-- /row -->
+
+            </div> <!-- /span9 -->
+
+
+        </div> <!-- /row -->
+
+    </div> <!-- /container -->
+
+</div> <!-- /content -->
+
+{include file="public/footer" /}
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+{js href="/static/js/jquery-1.7.2.min.js" /}
+{js href="/static/js/bootstrap.js" /}
+{js href="/static/js/laydate.js" /}
+
+<script type="text/javascript">
+    laydate.render({
+        elem: '#end_time' //指定元素
+    });
+    laydate.render({
+        elem: '#start_time' //指定元素
+    });
+    var editor;
+    $(function () {
+        //具体参数配置在  editor_config.js  中
+        var options = {
+            initialFrameHeight: 250, //初化高度
+            initialFrameWidth: 460,
+            focus: false, //初始化时，是否让编辑器获得焦点true或false
+            maximumWords: 99999, removeFormatAttributes: 'class,style,lang,width,height,align,hspace,valign'
+            , //允许的最大字符数 'fullscreen',
+            pasteplain: false, //是否默认为纯文本粘贴。false为不使用纯文本粘贴，true为使用纯文本粘贴
+            autoHeightEnabled: true,
+            topOffset: 0,
+            toolbarTopOffset: 0,
+            scaleEnabled: true,
+            toolbars: [
+                [
+                    'bold', 'italic', 'underline', /* 'fontborder',
+                    'strikethrough', 'superscript', 'subscript',
+                    'removeformat', 'formatmatch', 'autotypeset',
+                    'blockquote', 'pasteplain', '|', 'forecolor',
+                    'backcolor', 'insertorderedlist'*/
+                ]
+            ]
+        };
+        editor = new UE.ui.Editor(options);
+        editor.render("description");  //  指定 textarea 的  id 为 goods_content
+
+    });
+</script>
+</body>
+</html>
