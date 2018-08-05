@@ -49,6 +49,12 @@
             论文选题
         </a>
         </li>
+        <li class="{if condition='($controller eq "Schedule")'}active{/if}">
+        <a href="{:url('/teacher/schedule')}">
+            <i class="icon-pushpin"></i>
+            论文进度
+        </a>
+        </li>
         <li class="{if condition='($action eq "student_article")'}active{/if}">
             <a href="{:url('/student/student_article')}">
                 <i class="icon-pushpin"></i>

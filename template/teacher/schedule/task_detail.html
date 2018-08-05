@@ -135,7 +135,7 @@
                                                     <label class="control-label">评语:</label>
                                                     <div class="controls">
                                                         {if condition="$task.content eq ''"}
-                                                        <textarea type="text" class="" name="content"style="width: 450px;height:100px;" ></textarea>
+                                                        <textarea type="text" class="" name="content"id="content11"style="width: 450px;height:100px;" ></textarea>
                                                         {else/}
                                                         <p>{$task.content}</p>
                                                         {/if}
@@ -145,7 +145,7 @@
                                                     <label class="control-label">评分:</label>
                                                     <div class="controls">
                                                         {if condition="$task.r_point eq ''"}
-                                                        <input type="text" class="" name="r_point"id="point"value="" style="width: 450px"/>
+                                                        <input type="number"max="{$task.point}"min="0" class="" name="r_point"id="r_point"value="" style="width: 450px"/>
                                                         {else/}
                                                         <p>{$task.r_point}</p>
                                                         {/if}
@@ -159,7 +159,7 @@
 
                                                 <div class="form-actions">
                                                     {if condition="$task.r_point eq ''"}
-                                                    <button type="submit" class="btn btn-primary">提交</button>
+                                                    <button type="submit" id="submit"class="btn btn-primary">提交</button>
                                                     {/if}
                                                     <a  href="{:url('/teacher/task_list',['article_id'=>$task.article_id])}" class="btn btn-primary">返回</a>
                                                 </div> <!-- /form-actions -->
@@ -233,6 +233,18 @@
         editor.render("description");  //  指定 textarea 的  id 为 goods_content
 
     });
+    $('#submit').click(function () {
+        var max_point="{$task.point}";
+        if($('#content11').val()==''){
+            alert('评语不能为空')
+            return false
+        }
+        if($('#r_point').val()>max_point){
+            alert('最高分数超过任务分数')
+            return false
+        }
+
+    })
 </script>
 </body>
 </html>
