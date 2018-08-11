@@ -50,6 +50,8 @@ Route::group('student',function(){
     Route::post('add_message','student/Message/add_message');
     Route::any('notice_detail','student/Index/notice_detail');
     Route::any('student_article','student/Article/student_article');
+    Route::any('task_list','student/Schedule/task_list');
+    Route::any('task_detail','student/Schedule/task_detail');
 });
 
 //管理员模板路由

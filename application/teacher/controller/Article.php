@@ -95,9 +95,9 @@ class Article extends Common
         $article = Db::name('Article')->find($article_id);//查询论文
         //post提交
         if (IS_POST) {
-            if ($article['schedule'] != 5) {//论文进度未完成不能打分
+           /* if ($article['schedule'] != 5) {//论文进度未完成不能打分
                 $this->error('该学生未完成该论文,不能评分');
-            }
+            }*/
             $content = $this->request->param('content');//获取评语
             if ($content == '') {
                 $this->error('评语不能为空');

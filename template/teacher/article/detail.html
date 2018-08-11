@@ -136,7 +136,7 @@
 												</p>
 											</div> &lt;!&ndash; /controls &ndash;&gt;
 										</div>-->
-										<!--<div class="control-group">
+										<div class="control-group">
 											<label class="control-label">评语:</label>
 											<div class="controls">
 												{if condition="$article.content eq ''"}
@@ -144,24 +144,24 @@
 												{else/}
 												<p>{$article.content}</p>
 												{/if}
-											</div> &lt;!&ndash; /controls &ndash;&gt;
+											</div>
 										</div>
 										<div class="control-group">
 											<label class="control-label">评分:</label>
 											<div class="controls">
 												{if condition="$article.point eq ''"}
-												<input type="text" class="" name="point"id="point"value="" style="width: 450px"/>
+												<input type="number" class="" name="point"id="point"value="" style="width: 450px"/>
 												{else/}
 												<p>{$article.point}</p>
 												{/if}
-											</div> &lt;!&ndash; /controls &ndash;&gt;
-										</div>-->
+											</div>
+										</div>
 
-									<!--	{if condition="$article.content eq ''"}
+									{if condition="$article.content eq ''"}
 										<div class="form-actions">
 											<button type="submit" class="btn btn-primary">提交</button>
 										</div>
-										{/if}-->
+										{/if}
 									</fieldset>
 								</form>
 								</div>

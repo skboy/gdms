@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2018-07-22 22:18:11
+Date: 2018-08-11 18:22:40
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -279,15 +279,16 @@ CREATE TABLE `gdms_task` (
   `create_time` int(11) DEFAULT NULL,
   `update_time` int(11) DEFAULT NULL,
   PRIMARY KEY (`task_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of gdms_task
 -- ----------------------------
 INSERT INTO `gdms_task` VALUES ('1', '23', '测试任务111', '<p>													测试描述1												</p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p>												</p>', '10', '1', '很好', '\\uploads\\20180721\\68254ab2431b06f554acf323707d8721.doc', '新建 DOC 文档 (2).doc', null, null, '1', '1511971200', '1546099200', null, null, '1532160078', '1532160126');
 INSERT INTO `gdms_task` VALUES ('6', '23', '111', '<p>111</p>', '10', null, null, '\\uploads\\20180721\\74633a8023a6a072f48151304eb8fed2.doc', '新建 DOC 文档.doc', null, null, '0', '1532102400', '1532707200', null, null, '1532161379', null);
-INSERT INTO `gdms_task` VALUES ('7', '24', '111', '<p>111</p>', '10', null, null, '\\uploads\\20180721\\c2f3b72286a11cad76dd80ff5bdf569b.doc', '新建 DOC 文档.doc', null, null, '0', '1532102400', '1532361600', null, null, '1532161520', null);
+INSERT INTO `gdms_task` VALUES ('7', '24', '调研', '<p>111</p><p>												</p>', '10', '10', '11', '\\uploads\\20180721\\c2f3b72286a11cad76dd80ff5bdf569b.doc', '新建 DOC 文档.doc', null, null, '0', '1532102400', '1532361600', null, null, '1532161520', '1532757911');
 INSERT INTO `gdms_task` VALUES ('8', '23', '111', '<p>111</p>', '10', null, null, '\\uploads\\20180721\\c2f3b72286a11cad76dd80ff5bdf569b.doc', '新建 DOC 文档.doc', null, null, '0', '1532102400', '1532361600', null, null, '1532161520', null);
+INSERT INTO `gdms_task` VALUES ('9', '24', '11', '<p>11111111111111</p>', '10', null, null, null, null, '\\uploads\\20180811\\084c738887f682d119377e07683e5bb6.rar', '1.rar', '0', '1533916800', '1535644800', null, null, '1533980558', '1533982609');
 
 -- ----------------------------
 -- Table structure for gdms_user
