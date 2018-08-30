@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>毕业设计管理系统</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+    {include file="public/link" /}
+    {css href="/static/css/pages/plans.css" /}
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <style>
+        a {
+            text-decoration: none;
+
+        }
+
+        a:hover, a:visited, a:link, a:active {
+            text-decoration: none;
+
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+
+    {include file="public/header" /}<!-- /navbar-inner -->
+
+</div> <!-- /navbar -->
+
+
+<div id="content">
+
+    <div class="container">
+
+        <div class="row">
+
+            {include file="public/left" /}
+
+
+            <div class="span9">
+
+                <h1 class="page-title">
+                    <i class="icon-th-large"></i>
+                    进度管理
+                </h1>
+                <a href="{:url('/teacher/task_add_edit',['article_id'=>$article_id])}" class="btn" style="margin-bottom: 10px">添加任务</a>
+                <table class="table table-hover" style="background-color: white;">
+                    <thead>
+                    <tr style="font-size: 16px">
+                        <th style="width: 15%">任务标题</th>
+                        <th style="width: 10%">学生名字</th>
+                        <th style="width: 10%">预期分数</th>
+                        <th style="width: 10%">实际分数</th>
+                        <th style="width: 20%">开始时间</th>
+                        <th style="width: 20%">结束时间</th>
+                        <th style="width: 15%">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {volist name="data" id="vo"}
+                    <tr>
+                        <td>{$vo.task_name} </td>
+                        <td>{$vo.article.student.name} </td>
+                        <td>{$vo.point} </td>
+                        <td>{if condition="$vo.r_point!=null"}{$vo.r_point} {else/}未评分{/if}</td>
+                        <td>
+                            {$vo.start_time|date="Y-m-d",###}
+                        </td>
+                        <td>
+                            {$vo.end_time|date="Y-m-d",###}
+                        </td>
+
+                        <td>
+                            <a href="{:url('/student/task_detail',['article_id'=>$article_id,'task_id'=>$vo.task_id])}">查看</a>
+                        </td>
+                    </tr>
+                    {/volist}
+                    </tbody>
+                </table>
+
+            </div> <!-- /span9 -->
+
+
+        </div> <!-- /row -->
+
+    </div> <!-- /container -->
+
+</div> <!-- /content -->
+
+{include file="public/footer" /}
+
+
+{js href="/static/js/jquery-1.7.2.min.js" /}
+{js href="/static/js/bootstrap.js" /}
+<script>
+    $(function () {
+
+    })
+</script>
+</body>
+</html>
