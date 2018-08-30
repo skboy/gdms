@@ -10,6 +10,7 @@ class Schedule extends Common
 {
 
 
+    //进度列表
     public function task_list()
     {
 
@@ -27,6 +28,7 @@ class Schedule extends Common
         return $this->fetch();
     }
 
+    //进度详情
     public function task_detail()
     {
         $Task = new Task();

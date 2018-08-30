@@ -10,6 +10,7 @@ use app\model\Task;
 
 class Schedule extends Common
 {
+    //老师点进度管理进来的页面
     public function schedule_list()
     {
         $Article = new Article();
@@ -22,6 +23,7 @@ class Schedule extends Common
         return $this->fetch();
     }
 
+    //点击查看该学生后的任务列表页面
     public function task_list()
     {
         $article_id = $this->request->param('article_id');
@@ -34,6 +36,7 @@ class Schedule extends Common
         return $this->fetch();
     }
 
+    //进度详情
     public function task_detail()
     {
         $Task = new Task();
@@ -243,6 +246,7 @@ class Schedule extends Common
         return $this->fetch();
     }
 
+    //删除
     public function task_delete()
     {
         $Task = new Task();
