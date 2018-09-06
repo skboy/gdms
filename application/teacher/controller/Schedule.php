@@ -234,7 +234,7 @@ class Schedule extends Common
                 $data['article_id'] = $article_id;
                 $data['create_time'] = time();
                 $res = $Task->insertGetId($data);//插入数据
-                $url = '/teacher/task_add_edit';
+                $url = '/teacher/task_add_edit/article_id/'.$article_id;
             }
             if ($res) {
                 $this->success('操作成功', $url);
